@@ -1,0 +1,38 @@
+.counter {
+  text-align: center;
+  margin-top: $spacing-xl;
+}
+
+.title {
+  color: $text-primary;
+  margin-bottom: $spacing-lg;
+  font-size: $font-size-xl;
+}
+
+.display {
+  margin: $spacing-xl 0;
+  padding: $spacing-lg;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: $border-radius-lg;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.count {
+  font-size: 3rem;
+  font-weight: 700;
+  color: $accent-color;
+  text-shadow: 0 0 20px rgba($accent-color, 0.5);
+  transition: all $transition-base;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.controls {
+  display: flex;
+  gap: $spacing-md;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

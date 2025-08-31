@@ -1,0 +1,91 @@
+.home {
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(135deg, $primary-gradient-start, $primary-gradient-end);
+}
+
+.header {
+  text-align: center;
+  padding: $spacing-2xl;
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: $spacing-lg;
+    background: linear-gradient(45deg, $accent-color, $secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .message {
+    font-size: $font-size-lg;
+    color: $text-secondary;
+    transition: color $transition-base;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 $spacing-xl $spacing-2xl;
+}
+
+.section {
+  background: $card-background;
+  border-radius: $border-radius-lg;
+  padding: $spacing-2xl;
+  margin-bottom: $spacing-xl;
+  box-shadow: $shadow-lg;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  h2 {
+    margin-bottom: $spacing-lg;
+    color: $text-primary;
+    font-size: $font-size-2xl;
+  }
+}
+
+.features {
+  background: $card-background;
+  border-radius: $border-radius-lg;
+  padding: $spacing-2xl;
+  box-shadow: $shadow-lg;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  h3 {
+    margin-bottom: $spacing-lg;
+    color: $accent-color;
+    font-size: $font-size-xl;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: $spacing-sm 0;
+      font-size: $font-size-base;
+      transition: transform $transition-fast;
+      position: relative;
+      padding-left: $spacing-lg;
+
+      &::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: $accent-color;
+      }
+
+      &:hover {
+        transform: translateX(5px);
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.about {
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(135deg, $primary-gradient-start, $primary-gradient-end);
+  padding: $spacing-xl 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 $spacing-xl;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: $spacing-2xl;
+  background: linear-gradient(45deg, $accent-color, $secondary-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content {
+  background: $card-background;
+  border-radius: $border-radius-lg;
+  padding: $spacing-2xl;
+  box-shadow: $shadow-lg;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.description {
+  font-size: $font-size-lg;
+  color: $text-secondary;
+  text-align: center;
+  margin-bottom: $spacing-2xl;
+  line-height: 1.6;
+}
+
+.techStack {
+  margin-bottom: $spacing-2xl;
+
+  h2 {
+    color: $text-primary;
+    margin-bottom: $spacing-lg;
+    font-size: $font-size-2xl;
+    text-align: center;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: $spacing-lg;
+  margin-bottom: $spacing-xl;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: $border-radius-md;
+  padding: $spacing-lg;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform $transition-base;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  h3 {
+    color: $accent-color;
+    margin-bottom: $spacing-md;
+    font-size: $font-size-lg;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      color: $text-secondary;
+      padding: $spacing-xs 0;
+      position: relative;
+      padding-left: $spacing-md;
+
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.actions {
+  text-align: center;
+}

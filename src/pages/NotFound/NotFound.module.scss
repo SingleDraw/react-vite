@@ -1,0 +1,57 @@
+.notFound {
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(135deg, $primary-gradient-start, $primary-gradient-end);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 $spacing-xl;
+}
+
+.content {
+  background: $card-background;
+  border-radius: $border-radius-lg;
+  padding: $spacing-2xl;
+  text-align: center;
+  box-shadow: $shadow-lg;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: $spacing-lg;
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+  text-shadow: none;
+  margin-bottom: $spacing-md;
+}
+
+.description {
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: normal;
+  text-shadow: none;
+  margin-bottom: $spacing-sm;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-md;
+}
+

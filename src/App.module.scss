@@ -1,0 +1,84 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, $primary-gradient-start, $primary-gradient-end);
+  color: $text-primary;
+  font-family: $font-family-base;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem;
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, $accent-color, $secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .message {
+    font-size: 1.2rem;
+    color: $text-secondary;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+
+.section {
+  background: $card-background;
+  border-radius: $border-radius-lg;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: $shadow-lg;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  h2 {
+    margin-bottom: 1.5rem;
+    color: $text-primary;
+    font-size: 1.5rem;
+  }
+}
+
+.features {
+  background: $card-background;
+  border-radius: $border-radius-lg;
+  padding: 2rem;
+  box-shadow: $shadow-lg;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  h3 {
+    margin-bottom: 1rem;
+    color: $accent-color;
+    font-size: 1.3rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      padding: 0.5rem 0;
+      font-size: 1.1rem;
+      transition: transform 0.2s ease;
+      
+      &:hover {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
