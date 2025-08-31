@@ -2,11 +2,32 @@ import { Link } from 'react-router-dom'
 import Button from '@/components/Button/Button'
 import styles from './About.module.scss'
 
+import { useEffect } from "react"
+import { useSelector, useDispatch } from "react-redux"
+import { RootState, AppDispatch } from "@/store/store"
+import { fetchUser } from "@/store/slices/userSlice"
+
 const About = () => {
+  const dispatch = useDispatch<AppDispatch>()
+  const { data, status, error } = useSelector((state: RootState) => state.user)
+
+  useEffect(() => {
+    dispatch(fetchUser(1)) // fetch user with id=1 on mount
+  }, [dispatch])
+
+  if (status === "loading") return <p>Loading...</p>
+  if (status === "failed") return <p>Error: {error}</p>
+
   return (
     <div className={styles.about}>
       <div className={styles.container}>
         <h1 className={styles.title}>About This Scaffold</h1>
+
+        {data && (
+          <p>
+            Hello {data.name}, your email is {data.email}.
+          </p>
+        )}
         
         <div className={styles.content}>
           <p className={styles.description}>
